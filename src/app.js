@@ -1,4 +1,4 @@
-import 'dotenv/config';
+impor './bootstrap.js';
 
 import Youch from 'youch';
 import express from 'express';
