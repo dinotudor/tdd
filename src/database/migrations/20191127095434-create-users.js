@@ -1,5 +1,3 @@
-
-
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('users', {
@@ -22,11 +20,11 @@ module.exports = {
         allowNull: false,
       },
       created_at: {
-        tyoe: Sequelize.DATE,
+        type: Sequelize.DATE,
         allowNull: false,
       },
       updated_at: {
-        tyoe: Sequelize.DATE,
+        type: Sequelize.DATE,
         allowNull: false,
       },
     });
