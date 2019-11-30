@@ -2,7 +2,7 @@ import request from 'supertest';
 import bcrypt from 'bcryptjs';
 import app from '../../src/app';
 
-import User from '../../src/app/models/User';
+import factory from '../factories';
 import truncate from '../util/truncate';
 
 describe('User', () => {
@@ -11,9 +11,7 @@ describe('User', () => {
   });
 
   it('should encrypt user password when creating a profile', async () => {
-    const user = await User.create({
-      name: 'Dino Tudor',
-      email: 'dino@dino.com',
+    const user = await factory.create('User', {
       password: '123456',
     });
 
