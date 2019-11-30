@@ -28,7 +28,7 @@ describe('User', () => {
       .send({
         name: 'Dino Tudor',
         email: 'dino@dino.com',
-        password_hash: '123456',
+        password: '123456',
       });
 
     expect(response.body).toHaveProperty('id');
@@ -40,14 +40,14 @@ describe('User', () => {
       .send({
         name: 'Dino Tudor',
         email: 'dino@dino.com',
-        password_hash: '123456',
+        password: '123456',
       });
     const response = await request(app)
       .post('/users')
       .send({
         name: 'Dino Tudor',
         email: 'dino@dino.com',
-        password_hash: '123456',
+        password: '123456',
       });
     expect(response.status).toBe(400);
   });
